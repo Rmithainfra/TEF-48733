@@ -11,9 +11,9 @@ var viewer = pannellum.viewer('panorama',{
             "type": "equirectangular",
             "panorama": "360.JPG", // CHANGE THE IMAGE NAME
             "hfov":200,
-            "yaw":-30,             //  IF NEEDED CHANGE THE YAW VALUE
+            "yaw":-40,             //  IF NEEDED CHANGE THE YAW VALUE
             "compass":true,
-            "northOffset":30       //  IF NEEDED CHANGE THE NORTHOFFSET VALUE
+            "northOffset":40       //  IF NEEDED CHANGE THE NORTHOFFSET VALUE
         },
   
         "image-1": {
@@ -24,9 +24,9 @@ var viewer = pannellum.viewer('panorama',{
         "vaov":87,
         "minPitch":-25,
         "maxPitch": 25,
-        "yaw":0,            //  IF NEEDED CHANGE THE YAW VALUE
+        "yaw":-10,            //  IF NEEDED CHANGE THE YAW VALUE
         "compass":true,
-        "northOffset":0    //  IF NEEDED CHANGE THE NORTHOFFSET VALUE
+        "northOffset":10    //  IF NEEDED CHANGE THE NORTHOFFSET VALUE
       },
 
       "image-2": {
@@ -37,9 +37,9 @@ var viewer = pannellum.viewer('panorama',{
         "vaov":87,
         "minPitch":-25,
         "maxPitch": 25,
-        "yaw": 0,         //  IF NEEDED CHANGE THE YAW VALUE
+        "yaw": -10,         //  IF NEEDED CHANGE THE YAW VALUE
         "compass":true,
-        "northOffset":0   //  IF NEEDED CHANGE THE NORTHOFFSET VALUE
+        "northOffset":10   //  IF NEEDED CHANGE THE NORTHOFFSET VALUE
       },
 
       "image-3":{
@@ -50,9 +50,9 @@ var viewer = pannellum.viewer('panorama',{
         "vaov":87,
         "minPitch":-25,
         "maxPitch": 25,
-        "yaw":0,            //  IF NEEDED CHANGE THE YAW VALUE
+        "yaw":-10,            //  IF NEEDED CHANGE THE YAW VALUE
         "compass":true,
-        "northOffset":0    //  IF NEEDED CHANGE THE NORTHOFFSET VALUE
+        "northOffset":10    //  IF NEEDED CHANGE THE NORTHOFFSET VALUE
     },
     // "image-4":{
     //     "type": "equirectangular",
@@ -151,10 +151,10 @@ function updateDegreeScale() {
   
     // Define initial yaw values for each image (adjust these as needed)
     var initialYaw = {
-      "image-360": -30, // GIVE THE YAW VALUE AS IT IS
-      "image-1": 0,  // GIVE THE YAW VALUE
-      "image-2": 0,  // GIVE THE YAW VALUE
-      "image-3": 0,// GIVE THE YAW VALUE
+      "image-360": -40, // GIVE THE YAW VALUE AS IT IS
+      "image-1": -10,  // GIVE THE YAW VALUE
+      "image-2": -10,  // GIVE THE YAW VALUE
+      "image-3": -10,// GIVE THE YAW VALUE
     //   "image-4": 0   
     //   "image-5": 0   
     };
@@ -212,3 +212,4 @@ viewer.on('viewchange', updateDegreeScale);
 viewer.on('mousedown', function() {
     setInterval(updateDegreeScale, 100);
 });
+
